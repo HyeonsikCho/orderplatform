@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 import 'fabric';
 declare const fabric: any;
+declare const $: any;
+declare const jquery: any;
+declare const screenfull: any;
 
 @Component({
   selector: 'app-design-editor',
@@ -109,6 +112,23 @@ export class DesignEditorComponent {
     // console.log(canvasElement)
     // });
 
+    $('.theme-light-dark .t-light').on('click', function() {
+      $('body').removeClass('menu_dark');
+  });
+
+  $('.theme-light-dark .t-dark').on('click', function() {
+      $('body').addClass('menu_dark');
+  });
+
+  $('.m_img_btn').on('click', function() {
+      $('body').toggleClass('menu_img');
+  });
+
+  $('.boxs-close').on('click', function(){
+      const element = $(this);
+      const cards = element.parents('.card');
+      cards.addClass('closed').fadeOut();
+  });
   }
 
 
@@ -151,13 +171,13 @@ export class DesignEditorComponent {
         left: 10,
         top: 10,
         angle: 0,
-        padding: 10,
+        padding: 0,
         cornersize: 10,
         hasRotatingPoint: true,
         peloas: 12
       });
-      image.setWidth(150);
-      image.setHeight(150);
+      image.width = image.getScaledWidth();
+      image.height = image.getScaledHeight();
       this.extend(image, this.randomId());
       this.canvas.add(image);
       this.selectItemAfterAdded(image);
@@ -173,12 +193,12 @@ export class DesignEditorComponent {
           left: 10,
           top: 10,
           angle: 0,
-          padding: 10,
+          padding: 0,
           cornersize: 10,
           hasRotatingPoint: true
         });
-        image.setWidth(200);
-        image.setHeight(200);
+        image.width = image.getScaledWidth();
+        image.height = image.getScaledHeight();
         this.extend(image, this.randomId());
         this.canvas.add(image);
         this.selectItemAfterAdded(image);
@@ -236,11 +256,11 @@ export class DesignEditorComponent {
   /*Canvas*/
 
   cleanSelect() {
-    this.canvas.deactivateAllWithDispatch().renderAll();
+    this.canvas.renderAll();
   }
 
   selectItemAfterAdded(obj) {
-    this.canvas.deactivateAllWithDispatch().renderAll();
+    this.canvas.renderAll();
     this.canvas.setActiveObject(obj);
   }
 
