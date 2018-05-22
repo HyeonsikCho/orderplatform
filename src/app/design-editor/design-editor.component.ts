@@ -129,6 +129,7 @@ export class DesignEditorComponent {
       const cards = element.parents('.card');
       cards.addClass('closed').fadeOut();
   });
+
   }
 
 
