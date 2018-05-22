@@ -52,7 +52,8 @@ export class DesignEditorComponent {
     this.canvas = new fabric.Canvas('canvas', {
       hoverCursor: 'pointer',
       selection: true,
-      selectionBorderColor: 'blue'
+      selectionBorderColor: 'lightblue',
+      selectionLineWidth: 0.5
     });
 
     this.canvas.on({
@@ -64,7 +65,7 @@ export class DesignEditorComponent {
         this.selected = selectedObject
         selectedObject.hasRotatingPoint = true;
         selectedObject.transparentCorners = false;
-        // selectedObject.cornerColor = 'rgba(255, 87, 34, 0.7)';
+        //selectedObject.cornerColor = 'rgba(255, 87, 34, 0.7)';
 
         this.resetPanels();
 
