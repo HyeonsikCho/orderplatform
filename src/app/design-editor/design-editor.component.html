@@ -7,7 +7,7 @@
     </div>
 </div>
 <div class="overlay"></div>
-
+<div class="row">
 <div *ngIf="previousUrl; else elseBlock">
     <!-- Left Sidebar -->
     <div ngSwitch="{{previousUrl}}">
@@ -2090,11 +2090,11 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#user">
-                    <i class="zmdi zmdi-account m-r-5"></i>User</a>
+                    <i class="zmdi zmdi-account m-r-5"></i>이미지</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#user">
-                    <i class="zmdi zmdi-account m-r-5"></i>User</a>
+                    <i class="zmdi zmdi-account m-r-5"></i>텍스트</a>
             </li>
         </ul>
 
@@ -2115,33 +2115,38 @@
                                         <div>
                                             <div id="aniimated-thumbnials" class="list-unstyled row clearfix">
                                                 <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                    <a href="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-5.png">
+                                                    <a (click)="applyTemplate(0);">
                                                         <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-5.png"
                                                             alt=""> </a>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                    <a href="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-4.png">
+                                                    <a (click)="applyTemplate(1);">
                                                         <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-4.png"
                                                             alt=""> </a>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                    <a href="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-3.png">
-                                                        <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-3.png"
+                                                    <a (click)="applyTemplate(2);">
+                                                        <img class="img-fluid img-thumbnail" src="assets/images/templates/pic_f7eb26186161551fa08bb96d738ddd4f-3_2.png"
                                                             alt=""> </a>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                    <a href="http://www.kemasaja.com/images/../editor/json_project/pic_5b412b5660cdff2694a1b9808275d1d8-1.png">
-                                                        <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_5b412b5660cdff2694a1b9808275d1d8-1.png"
+                                                    <a (click)="applyTemplate(3);">
+                                                        <img class="img-fluid img-thumbnail" src="assets/images/templates/pic_f7eb26186161551fa08bb96d738ddd4f-2_2.png"
                                                             alt=""> </a>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                    <a href="http://www.kemasaja.com/images/../editor/json_project/pic_f7eb26186161551fa08bb96d738ddd4f-3.png">
+                                                    <a (click)="applyTemplate(4);">
                                                         <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_f7eb26186161551fa08bb96d738ddd4f-3.png"
                                                             alt=""> </a>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                    <a href="http://www.kemasaja.com/images/../editor/json_project/pic_f3f3719177b95b76a10e3360bd8b01ec-1.png">
+                                                    <a (click)="applyTemplate(5);">
                                                         <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_f3f3719177b95b76a10e3360bd8b01ec-1.png"
+                                                            alt=""> </a>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
+                                                    <a (click)="applyTemplate(6);">
+                                                        <img class="img-fluid img-thumbnail" src="assets/images/templates/pic_2b53f1e6505a7ae2c243fd7b44a864df-4_2.png"
                                                             alt=""> </a>
                                                 </div>
                                             </div>
@@ -2156,85 +2161,32 @@
             <div class="tab-pane stretchLeft" id="user">
                 <div class="menu">
                     <ul class="list">
-                        <li>
-                            <div class="user-info m-b-20 p-b-15">
-                                <div class="image">
-                                    <a routerLink="/sample-pages/profile">
-                                        <img src="assets/images/profile_av.jpg" alt="User">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h4>Michael</h4>
-                                    <small>UI UX Designer</small>
-                                </div>
-                                <a title="facebook" href="#">
-                                    <i class="zmdi zmdi-facebook"></i>
-                                </a>
-                                <a title="twitter" href="#">
-                                    <i class="zmdi zmdi-twitter"></i>
-                                </a>
-                                <a title="instagram" href="#">
-                                    <i class="zmdi zmdi-instagram"></i>
-                                </a>
-                                <p class="text-muted">795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <h5 class="m-b-5">852</h5>
-                                        <small>Following</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <h5 class="m-b-5">13k</h5>
-                                        <small>Followers</small>
-                                    </div>
-                                    <div class="col-4">
-                                        <h5 class="m-b-5">234</h5>
-                                        <small>Post</small>
+                        <div>
+                            <div class="card">
+                                    <div class="card-header">Add images</div>
+                                    <div class="card-body">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/pikachu.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/squirtle.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/bullbasaur.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/charmander.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/bellsprout.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/caterpie.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/dratini.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/eevee.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/jigglypuff.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/mankey.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/meowth.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/pidgey.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/psyduck.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/rattata.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/abra.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/snorlax.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/zubat.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/yadis.svg">
+                                        <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/cookthedesign.svg">
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <small class="text-muted">Email address: </small>
-                            <p>michael@gmail.com</p>
-                            <hr>
-                            <small class="text-muted">Phone: </small>
-                            <p>+ 202-555-0191</p>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <div>Photoshop</div>
-                                    <div class="progress m-b-20">
-                                        <div class="progress-bar l-blue " role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%">
-                                            <span class="sr-only">62% Complete</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>Wordpress</div>
-                                    <div class="progress m-b-20">
-                                        <div class="progress-bar l-green " role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 56%">
-                                            <span class="sr-only">87% Complete</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>HTML 5</div>
-                                    <div class="progress m-b-20">
-                                        <div class="progress-bar l-amber" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%">
-                                            <span class="sr-only">32% Complete</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>Angular</div>
-                                    <div class="progress m-b-20">
-                                        <div class="progress-bar l-blush" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width: 43%">
-                                            <span class="sr-only">56% Complete</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -2722,393 +2674,99 @@
     </div>
 </div>
 <div class="container">
-    <menu class="toolbarContainer toolbarContainer--active" style="padding-left: 10px;" *ngIf="selected && textEditor">
-        <div class="toolbar__wrapper">
-            <menu class="toolbar  toolbar--element toolbar--right" style="visibility: visible;margin-top: 0px;">
-                <ul class="toolbar__list">
-                    <li class="toolbar__item toolbar__separator toolbar__subheading" data-width="6" style=""></li>
-                    <li class="toolbar__item toolbar__item--copy enabled  " data-width="48">
-                        <button data-item="copy" class="toolbar__button toolbar__button--copy ">
-                            <span class="toolbar__label toolbar__label--copy">복사</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--copy">복사</div>
-                    </li>
-                    <li class="toolbar__item toolbar__item--arrange enabled  toolbar__item--submenu" data-width="48">
-                        <button data-item="arrange" class="toolbar__button toolbar__button--arrange ">
-                            <span class="toolbar__label toolbar__label--arrange">정렬</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--arrange">정렬</div>
-                        <menu class="toolbar toolbar--arrange toolbar--vertical">
-                            <ul class="toolbar__list">
-                                <li class="toolbar__item toolbar__item--forward disabled" data-width="130">
-                                    <button data-item="forward" class="toolbar__button toolbar__button--forward toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--forward">앞으로</span>
-                                        <span class="toolbar__spinner"></span>
-                                        <span class="toolbar__shortcut toolbar__shortcut--forward">Ctrl ]</span>
-                                    </button>
-                                </li>
-                                <li class="toolbar__item toolbar__item--back enabled" data-width="130">
-                                    <button data-item="back" class="toolbar__button toolbar__button--back toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--back">뒤로</span>
-                                        <span class="toolbar__spinner"></span>
-                                        <span class="toolbar__shortcut toolbar__shortcut--back">Ctrl [</span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </menu>
-                    </li>
-                    <li class="toolbar__item toolbar__item--transparency enabled  toolbar__item--submenu" data-width="38">
-                        <button data-item="transparency" class="toolbar__button toolbar__button--transparency toolbar__button--icon">
-                            <span class="toolbar__label toolbar__label--transparency">투명도</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--transparency">투명도</div>
-                        <menu class="toolbar toolbar--transparency ">
-                            <ul class="toolbar__list">
-                                <li class="toolbar__item toolbar__item--slider" data-width="286">
-                                    <label class="toolbar__label toolbar__label--transparency">투명도</label>
-                                    <div class="toolbar__sliderWrapper">
-                                        <div class="toolbar__sliderBackground"></div>
-                                        <input class="toolbar__slider toolbar__slider--transparency" type="range" min="0" max="100" step="1">
-                                    </div>
-                                    <input class="toolbar__sliderValue toolbar__sliderValue--transparency" type="number" min="0" max="100" step="1" disabled="disabled">
-                                </li>
-                            </ul>
-                        </menu>
-                    </li>
-                    <li class="toolbar__item toolbar__item--link enabled  toolbar__item--submenu" data-width="38">
-                        <button data-item="link" class="toolbar__button toolbar__button--link toolbar__button--icon">
-                            <span class="toolbar__label toolbar__label--link">링크</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--link">링크</div>
-                        <menu class="toolbar toolbar--link ">
-                            <ul class="toolbar__list">
-                                <li class="toolbar__item toolbar__item--input" data-width="322">
-                                    <input class="toolbar__input toolbar__input--link" type="text" placeholder="URL을 입력하거나 붙여넣으세요.">
-                                    <button class="button buttonSmall toolbar__submit toolbar__submit--link">적용</button>
-                                    <div class="toolbar__inputLabel toolbar__inputLabel--link"></div>
-                                </li>
-                            </ul>
-                        </menu>
-                    </li>
-                    <li class="toolbar__item toolbar__item--more disabled  toolbar__item--submenu" data-width="79" style="">
-                        <button data-item="more" class="toolbar__button toolbar__button--more ">
-                            <span class="toolbar__label toolbar__label--more">더 보기</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--more">더 보기</div>
-                        <menu class="toolbar toolbar--more toolbar--vertical">
-                            <ul class="toolbar__list"></ul>
-                        </menu>
-                    </li>
-                    <li class="toolbar__item toolbar__item--delete enabled  " data-width="34">
-                        <button data-item="delete" class="toolbar__button toolbar__button--delete toolbar__button--icon">
-                            <span class="toolbar__label toolbar__label--delete">삭제</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--delete">삭제</div>
-                    </li>
-                </ul>
-            </menu>
-            <menu class="toolbar  toolbar--font" style="visibility: visible;padding-left: 0px;margin-top: 0px;">
-                <ul class="toolbar__list" style="padding-left: 0px;">
-                    <li class="toolbar__item enabled   toolbar__item--submenu toolbar__item--submenuExpanded" data-width="144">
-                            <div class="custom-item-body">
-                                    <div class="custom-item">
-                                            <div class="custom-item-body">
-                                                <select [(ngModel)]="props.fontFamily" class="form-control" (change)="setFontFamily()">
-                                                    <option value="arial">Arial</option>
-                                                    <option value="helvetica" selected>Helvetica</option>
-                                                    <option value="verdana">Verdana</option>
-                                                    <option value="courier">Courier</option>
-                                                    <option value="Roboto">Roboto</option>
-                                                    <option value="Open Sans">Open Sans</option>
-                                                    <option value="Zilla Slab">Zilla Slab</option>
-                                                    <option value="Lato">Lato</option>
-                                                    <option value="Bellefair">Bellefair</option>
-                                                    <option value="Fresca">Fresca</option>
-                                                    <option value="Raleway">Raleway</option>
-                                                    <option value="Open Sans Condensed">Open Sans Condensed</option>
-                                                    <option value="Indie Flower">Indie Flower</option>
-                                                    <option value="Josefin Sans">Josefin Sans</option>
-                                                    <option value="Inconsolata">Inconsolata</option>
-                                                    <option value="Pacifico">Pacifico</option>
-                                                    <option value="Gloria Hallelujah">Gloria Hallelujah</option>
-                                                </select>
-                                            </div>
-                                        </div>
+    <div class="row" style="margin-left:365px;">
+            <div class="card col-xl-12">
+                    <div class="header">
+                        <div class="col-lg-20 col-md-20- col-sm-20">
+                                <div class="row clearfix">
+                            <div class="col-lg-1 col-md-6">
+                        <select [(ngModel)]="props.fontFamily" class="" (change)="setFontFamily()">
+                                <option value="arial">Arial</option>
+                                <option value="helvetica" selected>Helvetica</option>
+                                <option value="verdana">Verdana</option>
+                                <option value="courier">Courier</option>
+                                <option value="Roboto">Roboto</option>
+                                <option value="Open Sans">Open Sans</option>
+                                <option value="Zilla Slab">Zilla Slab</option>
+                                <option value="Lato">Lato</option>
+                                <option value="Bellefair">Bellefair</option>
+                                <option value="Fresca">Fresca</option>
+                                <option value="Raleway">Raleway</option>
+                                <option value="Open Sans Condensed">Open Sans Condensed</option>
+                                <option value="Indie Flower">Indie Flower</option>
+                                <option value="Josefin Sans">Josefin Sans</option>
+                                <option value="Inconsolata">Inconsolata</option>
+                                <option value="Pacifico">Pacifico</option>
+                                <option value="Gloria Hallelujah">Gloria Hallelujah</option>
+                        </select>
+                        </div>
+
+                        <div class="col-lg-1 col-md-6">
+                        <select type="range" [(ngModel)]="props.fontSize" (change)="setFontSize()" width="50px">
+                                <option value="6">6</option>
+                                <option value="8" selected>8</option>
+                                <option value="10">10</option>
+                                <option value="12">12</option>
+                                <option value="14">14</option>
+                                <option value="16">16</option>
+                                <option value="18">18</option>
+                                <option value="21">21</option>
+                                <option value="24">24</option>
+                                <option value="28">28</option>
+                                <option value="32">32</option>
+                                <option value="36">36</option>
+                                <option value="42">42</option>
+                                <option value="48">48</option>
+                                <option value="56">56</option>
+                                <option value="64">64</option>
+                                <option value="72">72</option>
+                        </select>
+                        </div>
+                        <div class="col-lg-1 col-md-6">
+                        <input type="text" class="form-control" [cpPosition]="'bottom'" [(colorPicker)]="props.fill" [style.background]="props.fill"
+                                [value]="props.fill" (colorPickerChange)="setFill()">
                                 </div>
-                    </li>
-                    <li class="toolbar__item toolbar__item--fontSize enabled   toolbar__item--submenu" data-width="105">
-                        <button data-item="fontSize" class="toolbar__button toolbar__button--fontSize ">
-                                <div class="custom-item-body">
-                                        <select [(ngModel)]="props.fontSize" class="form-control" (change)="setFontSize()">
-                                            <option value="6">6</option>
-                                            <option value="8" selected>8</option>
-                                            <option value="10">10</option>
-                                            <option value="12">12</option>
-                                            <option value="14">14</option>
-                                            <option value="16">16</option>
-                                            <option value="18">18</option>
-                                            <option value="26">26</option>
-                                            <option value="32">32</option>
-                                            <option value="48">48</option>
-                                            <option value="72">72</option>
-                                        </select>
+                                <div class="col-lg-1 col-md-6">
+                                <div class="custom-item-body text-center">
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-primary btn-sm" [ngClass]="{'active': props.fontWeight }" (click)="setBold()">
+                                                <i class="fa fa-bold">Bold</i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" [ngClass]="{'active': props.fontStyle }" (click)="setFontStyle()">
+                                                <i class="fa fa-italic">Italic</i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" [ngClass]="{'active': hasTextDecoration('underline') }" (click)="setTextDecoration('underline')">
+                                                <i class="fa fa-underline"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" [ngClass]="{'active': hasTextDecoration('overline') }" (click)="setTextDecoration('overline')">
+                                                <i class="fa fa-underline fa-flip-vertical"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" [ngClass]="{'active': hasTextDecoration('line-through') }" (click)="setTextDecoration('line-through')">
+                                                <i class="fa fa-strikethrough"></i>
+                                            </button>
+                                        </div>
+                                        </div>
                                     </div>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--fontSize">글꼴 크기</div>
-                        <div class="menuList">
-                            <ul class="menuList__inner">
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="6">6</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="8">8</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="10">10</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="12">12</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="14">14</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="16">16</button>
-                                </li>
-                                <li class="selectable active">
-                                    <button class="toolbar__button toolbar__button--selected" data-text="18">18</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="21">21</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="24">24</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="28">28</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="32">32</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="36">36</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="42">42</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="48">48</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="56">56</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="64">64</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="72">72</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="80">80</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="88">88</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="96">96</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="104">104</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="120">120</button>
-                                </li>
-                                <li class="selectable">
-                                    <button class="toolbar__button " data-text="144">144</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="toolbar__item toolbar__separator toolbar__subheading" data-width="11"></li>
-                    <li class="toolbar__item toolbar__item--color toolbar__item--color--text" data-width="34">
-                        <button data-colorindex="0" class="toolbar__button toolbar__button--color toolbar__button--icon toolbar__target--text"
-                            style="background-color: rgb(0, 0, 0);"></button>
-                        <div class="toolbar__tooltip">색상 선택</div>
-                    </li>
-                    <li class="toolbar__item toolbar__separator toolbar__subheading" data-width="11"></li>
-                    <li class="toolbar__item toolbar__item--bold disabled" data-width="38">
-                        <button data-item="bold" class="toolbar__button toolbar__button--bold toolbar__button--icon">
-                            <span class="toolbar__label toolbar__label--bold">굵게</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--bold">굵게
-                            <span class="toolbar__shortcut toolbar__shortcut--bold">Ctrl B</span>
-                        </div>
-                    </li>
-                    <li class="toolbar__item toolbar__item--italic disabled" data-width="38">
-                        <button data-item="italic" class="toolbar__button toolbar__button--italic toolbar__button--icon">
-                            <span class="toolbar__label toolbar__label--italic">기울임꼴</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--italic">기울임꼴
-                            <span class="toolbar__shortcut toolbar__shortcut--italic">Ctrl I</span>
-                        </div>
-                    </li>
-                    <li class="toolbar__item toolbar__item--textAlign enabled  toolbar__item--submenu" data-width="38">
-                        <button data-item="textAlign" class="toolbar__button toolbar__button--textAlign toolbar__button--icon toolbar__activeItem--left">
-                            <span class="toolbar__label toolbar__label--textAlign">텍스트 맞춤</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--textAlign">텍스트 맞춤</div>
-                        <menu class="toolbar toolbar--textAlign ">
-                            <ul class="toolbar__list">
-                                <li class="toolbar__item toolbar__item--left enabled toolbar__item--active" data-width="34">
-                                    <button data-item="left" class="toolbar__button toolbar__button--left toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--left">왼쪽</span>
-                                        <span class="toolbar__spinner"></span>
-                                    </button>
-                                    <div class="toolbar__tooltip toolbar__tooltip--left">왼쪽
-                                        <span class="toolbar__shortcut toolbar__shortcut--left">Ctrl Shift L</span>
                                     </div>
-                                </li>
-                                <li class="toolbar__item toolbar__item--center enabled" data-width="38">
-                                    <button data-item="center" class="toolbar__button toolbar__button--center toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--center">가운데</span>
-                                        <span class="toolbar__spinner"></span>
-                                    </button>
-                                    <div class="toolbar__tooltip toolbar__tooltip--center">가운데
-                                        <span class="toolbar__shortcut toolbar__shortcut--center">Ctrl Shift C</span>
                                     </div>
-                                </li>
-                                <li class="toolbar__item toolbar__item--right enabled" data-width="34">
-                                    <button data-item="right" class="toolbar__button toolbar__button--right toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--right">오른쪽</span>
-                                        <span class="toolbar__spinner"></span>
-                                    </button>
-                                    <div class="toolbar__tooltip toolbar__tooltip--right">오른쪽
-                                        <span class="toolbar__shortcut toolbar__shortcut--right">Ctrl Shift R</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </menu>
-                    </li>
-                    <li class="toolbar__item toolbar__item--uppercase enabled" data-width="44">
-                        <button data-item="uppercase" class="toolbar__button toolbar__button--uppercase toolbar__button--icon">
-                            <span class="toolbar__label toolbar__label--uppercase">대문자</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--uppercase">대문자
-                            <span class="toolbar__shortcut toolbar__shortcut--uppercase">Ctrl Shift K</span>
-                        </div>
-                    </li>
-                    <li class="toolbar__item toolbar__item--list enabled" data-width="38">
-                        <button data-item="list" class="toolbar__button toolbar__button--list toolbar__button--icon">
-                            <span class="toolbar__label toolbar__label--list">목록</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--list">목록</div>
-                    </li>
-                    <li class="toolbar__item toolbar__separator toolbar__subheading" data-width="11"></li>
-                    <li class="toolbar__item toolbar__item--textSpacing enabled  toolbar__item--submenu" data-width="44">
-                        <button data-item="textSpacing" class="toolbar__button toolbar__button--textSpacing ">
-                            <span class="toolbar__label toolbar__label--textSpacing">간격</span>
-                            <span class="toolbar__spinner"></span>
-                        </button>
-                        <div class="toolbar__tooltip toolbar__tooltip--textSpacing">간격</div>
-                        <menu class="toolbar toolbar--textSpacing ">
-                            <ul class="toolbar__list">
-                                <li class="toolbar__item toolbar__item--slider" data-width="286">
-                                    <label class="toolbar__label toolbar__label--letterSpacing">글자 간격</label>
-                                    <div class="toolbar__sliderWrapper">
-                                        <div class="toolbar__sliderBackground"></div>
-                                        <input class="toolbar__slider toolbar__slider--letterSpacing" type="range"
-                                            min="-200" max="800" step="10">
-                                    </div>
-                                    <input class="toolbar__sliderValue toolbar__sliderValue--letterSpacing" type="number"
-                                        min="-200" max="800" step="10" disabled="disabled">
-                                </li>
-                                <li class="toolbar__item toolbar__item--slider" data-width="286">
-                                    <label class="toolbar__label toolbar__label--lineHeight">선 높이</label>
-                                    <div class="toolbar__sliderWrapper">
-                                        <div class="toolbar__sliderBackground"></div>
-                                        <input class="toolbar__slider toolbar__slider--lineHeight" type="range" min="0.5"
-                                            max="2.5" step="0.01">
-                                    </div>
-                                    <input class="toolbar__sliderValue toolbar__sliderValue--lineHeight" type="number" min="0.5"
-                                        max="2.5" step="0.01" disabled="disabled">
-                                </li>
-                                <li class="toolbar__item toolbar__separator toolbar__subheading" data-width="286"></li>
-                                <li class="toolbar__item toolbar__item--textVerticalAlign enabled  " data-width="131">
-                                    <button data-item="textVerticalAlign" class="toolbar__button toolbar__button--textVerticalAlign ">
-                                        <span class="toolbar__label toolbar__label--textVerticalAlign">텍스트 상자 고정</span>
-                                        <span class="toolbar__spinner"></span>
-                                    </button>
-                                    <div class="toolbar__tooltip toolbar__tooltip--textVerticalAlign">텍스트 상자 고정</div>
-                                </li>
-                                <li class="toolbar__item toolbar__item--textVerticalAlignTop enabled toolbar__item--active"
-                                    data-width="34">
-                                    <button data-item="textVerticalAlignTop" class="toolbar__button toolbar__button--textVerticalAlignTop toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--textVerticalAlignTop">위에서</span>
-                                        <span class="toolbar__spinner"></span>
-                                    </button>
-                                    <div class="toolbar__tooltip toolbar__tooltip--textVerticalAlignTop">위에서
-                                        <span class="toolbar__shortcut toolbar__shortcut--textVerticalAlignTop">Ctrl Alt T</span>
-                                    </div>
-                                </li>
-                                <li class="toolbar__item toolbar__item--textVerticalAlignMiddle enabled" data-width="34">
-                                    <button data-item="textVerticalAlignMiddle" class="toolbar__button toolbar__button--textVerticalAlignMiddle toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--textVerticalAlignMiddle">가운데에서</span>
-                                        <span class="toolbar__spinner"></span>
-                                    </button>
-                                    <div class="toolbar__tooltip toolbar__tooltip--textVerticalAlignMiddle">가운데에서
-                                        <span class="toolbar__shortcut toolbar__shortcut--textVerticalAlignMiddle">Ctrl Alt M</span>
-                                    </div>
-                                </li>
-                                <li class="toolbar__item toolbar__item--textVerticalAlignBottom enabled" data-width="34">
-                                    <button data-item="textVerticalAlignBottom" class="toolbar__button toolbar__button--textVerticalAlignBottom toolbar__button--icon">
-                                        <span class="toolbar__label toolbar__label--textVerticalAlignBottom">아래에서</span>
-                                        <span class="toolbar__spinner"></span>
-                                    </button>
-                                    <div class="toolbar__tooltip toolbar__tooltip--textVerticalAlignBottom">아래에서
-                                        <span class="toolbar__shortcut toolbar__shortcut--textVerticalAlignBottom">Ctrl Alt B</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </menu>
-                    </li>
-                </ul>
-            </menu>
-        </div>
-    </menu>
-    <div class="row">
-        <div class="col-xl-12">
-            <div class="row">
-                <div class="col-xl-12 text-right">
-                    <button data-toggle="tooltip" data-placement="bottom" title="Export to image" type="button" class="btn btn-primary" (click)="rasterize();">
-                        <i class="fa fa-download" aria-hidden="true"></i> Export to image</button>
-                    <button data-toggle="tooltip" data-placement="bottom" title="Export to SVG" type="button" class="btn btn-primary" (click)="rasterizeSVG();">
-                        <i class="fa fa-download" aria-hidden="true"></i> Export to SVG</button>
-                    <button data-toggle="tooltip" data-placement="bottom" title="Save in localStorage" type="button" class="btn btn-primary"
-                        (click)="saveCanvasToJSON();">
-                        <i class="fa fa-save" aria-hidden="true"></i> Save local</button>
-                    <button data-toggle="tooltip" data-placement="bottom" title="Load from localStorage" type="button" class="btn btn-primary"
-                        (click)="loadCanvasFromJSON();">
-                        <i class="fa fa-save" aria-hidden="true"></i> Load local</button>
-                    <button data-toggle="tooltip" data-placement="bottom" title="Clean Canvas" type="button" class="btn btn-danger" (click)="confirmClear();">
-                        <i class="fa fa-ban" aria-hidden="true"></i> Clean</button>
-                </div>
-            </div>
-        </div>
+                      <ul class="header-dropdown">
+                        <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                          <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="javascript:void(0);">Action</a></li>
+                            <li><a href="javascript:void(0);">Another action</a></li>
+                            <li><a href="javascript:void(0);">Something else</a></li>
+                          </ul>
+                        </li>
+                        <li class="remove">
+                          <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-xl-3">
+        <div class="col-xl-1" style="margin-left: 350px;">
             <div class="card">
                 <div class="card-header">Size</div>
                 <div class="card-body">
@@ -3152,29 +2810,6 @@
             </div>
             <br/>
             <div class="card">
-                <div class="card-header">Add images</div>
-                <div class="card-body max-height">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/pikachu.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/squirtle.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/bullbasaur.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/charmander.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/bellsprout.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/caterpie.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/dratini.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/eevee.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/jigglypuff.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/mankey.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/meowth.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/pidgey.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/psyduck.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/rattata.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/abra.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/snorlax.svg">
-                    <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/zubat.svg">
-                </div>
-            </div>
-            <br/>
-            <div class="card">
                 <div class="card-header">Upload image</div>
                 <div class="card-body text-center">
                     <img id="testImage" *ngIf="url" class="images-item-upload" [src]="url" (click)="addImageOnCanvas(url);">
@@ -3202,10 +2837,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-6">
+        <div class="col-xl-5">
             <canvas id="canvas"></canvas>
         </div>
-        <div class="col-xl-3">
+        <div class="col-xl-1" style="left: 300px;">
             <div class="card">
                 <div class="card-header">Options</div>
                 <div class="card-body text-center">
