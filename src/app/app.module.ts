@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, NgForm } from '@angular/forms';
 import { ColorPickerModule } from 'ngx-color-picker';
 
 import { AppComponent } from './app.component';
@@ -10,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { DesignEditorComponent } from './design-editor/design-editor.component';
+import { AuthorizationService } from './authentication/authorization.service';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { DesignEditorComponent } from './design-editor/design-editor.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    HttpModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     ColorPickerModule
   ],
-  providers: [],
+  providers: [AuthorizationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

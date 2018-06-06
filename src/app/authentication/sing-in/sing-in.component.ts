@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {AuthorizationService} from "../authorization.service";
+import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 declare const $: any;
 
@@ -8,11 +11,13 @@ declare const $: any;
   styleUrls: ['./sing-in.component.css'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class SingInComponent implements OnInit {
 
   year = (new Date()).getFullYear();
+  emailVerificationMessage: boolean = false;
 
-  constructor() { }
+  constructor(private auth: AuthorizationService, private _router: Router) { }
 
   ngOnInit() {
     $("body").addClass("authentication sidebar-collapse");
@@ -27,4 +32,18 @@ export class SingInComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    const email = "hyeonsik5015@gmail.com";
+    const password = "aodgh1928!";
+
+    this.auth.signIn(email, password).subscribe((data) => {
+      this._router.navigateByUrl('/');
+      alert(JSON.stringify(data));
+    }, (err)=> {
+      alert(JSON.stringify(err));
+      //this.emailVerificationMessage = true;
+    });   
+  }
+
+  
 }

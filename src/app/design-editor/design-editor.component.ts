@@ -16,7 +16,7 @@ declare const screenfull: any;
 export class DesignEditorComponent {
 
   private canvas: any;
-  private props: any = {
+  public props: any = {
     canvasFill: '#ffffff',
     canvasImage: '',
     id: null,
@@ -32,19 +32,19 @@ export class DesignEditorComponent {
     TextDecoration: ''
   };
 
-  private textString: string;
-  private url: string = '';
-  private size: any = {
+  public textString: string;
+  public url: string = '';
+  public size: any = {
     width: 1000,
     height: 620
   };
 
   private json: any;
   private globalEditor: boolean = false;
-  private textEditor: boolean = false;
+  public textEditor: boolean = false;
   private imageEditor: boolean = false;
-  private figureEditor: boolean = false;
-  private selected: any;
+  public figureEditor: boolean = false;
+  public selected: any;
   private templates : string[] = [
 
     //1
@@ -167,7 +167,7 @@ export class DesignEditorComponent {
 
   //Block "Size"
 
-  changeSize(event: any) {
+  changeSize() {
     this.canvas.setWidth(this.size.width);
     this.canvas.setHeight(this.size.height);
   }
