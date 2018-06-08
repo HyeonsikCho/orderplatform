@@ -44,40 +44,10 @@
                                             <div class="card">
                                                 <div>
                                                     <div id="aniimated-thumbnials" class="list-unstyled row clearfix">
-                                                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                            <a (click)="applyTemplate(0);">
-                                                                <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-5.png"
-                                                                    alt=""> </a>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                            <a (click)="applyTemplate(1);">
-                                                                <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_2b53f1e6505a7ae2c243fd7b44a864df-4.png"
-                                                                    alt=""> </a>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                            <a (click)="applyTemplate(2);">
-                                                                <img class="img-fluid img-thumbnail" src="assets/images/templates/pic_f7eb26186161551fa08bb96d738ddd4f-3_2.png"
-                                                                    alt=""> </a>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                            <a (click)="applyTemplate(3);">
-                                                                <img class="img-fluid img-thumbnail" src="assets/images/templates/pic_f7eb26186161551fa08bb96d738ddd4f-2_2.png"
-                                                                    alt=""> </a>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                            <a (click)="applyTemplate(4);">
-                                                                <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_f7eb26186161551fa08bb96d738ddd4f-3.png"
-                                                                    alt=""> </a>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                            <a (click)="applyTemplate(5);">
-                                                                <img class="img-fluid img-thumbnail" src="http://www.kemasaja.com/images/../editor/json_project/pic_f3f3719177b95b76a10e3360bd8b01ec-1.png"
-                                                                    alt=""> </a>
-                                                        </div>
-                                                        <div class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
-                                                            <a (click)="applyTemplate(6);">
-                                                                <img class="img-fluid img-thumbnail" src="assets/images/templates/pic_2b53f1e6505a7ae2c243fd7b44a864df-4_2.png"
-                                                                    alt=""> </a>
+                                                        <div *ngFor="let template of templates" class="col-xl-6 col-lg-4 col-md-6 col-sm-12 m-b-20">
+                                                            <a (click)="applyTemplate(template.Index)">
+                                                                <img class="img-fluid img-thumbnail" src="{{template.Thumbnail}}" alt=""> 
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -93,30 +63,12 @@
                             <ul class="list">
                                 <div>
                                     <div class="card">
-                                            <div class="card-header">Add images</div>
-                                            <div class="card-body">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/pikachu.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/squirtle.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/bullbasaur.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/charmander.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/bellsprout.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/caterpie.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/dratini.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/eevee.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/jigglypuff.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/mankey.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/meowth.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/pidgey.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/psyduck.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/rattata.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/abra.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/snorlax.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/zubat.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/yadis.svg">
-                                                <img class="images-item" (click)="getImgPolaroid($event)" src="assets/img/cookthedesign.svg">
-                                            </div>
+                                        <div class="card-header">Add images</div>
+                                        <div class="card-body">
+                                            <img *ngFor="let object of objects" class="images-item" (click)="getImgPolaroid($event)" src="{{object.Content}}">
                                         </div>
                                     </div>
+                                </div>
                             </ul>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthorizationService } from "../authentication/authorization.service";
-import {Http, Headers} from "@angular/http";
+import { Http, Headers } from "@angular/http";
 
 @Component({
   selector: 'app-main',
@@ -19,7 +19,6 @@ export class MainComponent implements OnInit {
     if (authenticatedUser == null) {
       return;
     }
-    
 
     this.bAuthenticated = true;
 
@@ -57,9 +56,10 @@ export class MainComponent implements OnInit {
           console.log(token);    
           alert(token);  
           headers.append('Authorization', token);        
-          this.http.get('https://bpxmjwpjgj.execute-api.ap-northeast-2.amazonaws.com/prod/get-template', { headers: headers })
+          that.http.get('https://bpxmjwpjgj.execute-api.ap-northeast-2.amazonaws.com/prod/get-template', { headers: headers })
             .subscribe(
-            response => {           
+            response => {       
+              console.log(response.json());    
               that._data = response.json();
             },
             error => {

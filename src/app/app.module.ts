@@ -13,6 +13,7 @@ import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { DesignEditorComponent } from './design-editor/design-editor.component';
 import { AuthorizationService } from './authentication/authorization.service';
+import { UploadFileService } from './authentication/s3.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,10 @@ import { AuthorizationService } from './authentication/authorization.service';
     ReactiveFormsModule,
     ColorPickerModule
   ],
-  providers: [AuthorizationService],
+  providers: [
+    AuthorizationService,
+    UploadFileService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
